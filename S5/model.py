@@ -44,7 +44,7 @@ def train(model, device, train_loader, optimizer, criterion):
 
     # Calculate loss
     loss = criterion(pred, target)
-    train_loss+=loss.item()
+    train_loss+=loss.item().sum()
 
     # Backpropagation
     loss.backward()
@@ -69,7 +69,7 @@ def test(model, device, test_loader, criterion):
             data, target = data.to(device), target.to(device)
 
             output = model(data)
-            test_loss += criterion(output, target).item()  # sum up batch loss
+            test_loss += criterion(output, target).item().sum()  # sum up batch loss
 
             correct += GetCorrectPredCount(output, target)
 
