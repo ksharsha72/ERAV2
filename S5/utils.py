@@ -30,14 +30,14 @@ test_transforms = transforms.Compose([
 
 
 train_data = datasets.MNIST('../data', train=True, download=True, transform=train_transforms)
-test_data = datasets.MNIST('../data', train=True, download=True, transform=train_transforms)
+test_data = datasets.MNIST('../data', train=False, download=True, transform=test_transforms)
 
 
 batch_size = 512
 
 kwargs = {'batch_size': batch_size, 'shuffle': False, 'num_workers': 2, 'pin_memory': True}
 
-test_loader = torch.utils.data.DataLoader(train_data, **kwargs)
+test_loader = torch.utils.data.DataLoader(test_data, **kwargs)
 train_loader = torch.utils.data.DataLoader(train_data, **kwargs)
 
 # Data to plot accuracy and loss graphs
