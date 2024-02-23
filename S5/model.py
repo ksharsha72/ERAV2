@@ -39,7 +39,8 @@ def train(model, device, train_loader, optimizer, criterion):
   for batch_idx, (data, target) in enumerate(pbar):
     data, target = data.to(device), target.to(device)
     optimizer.zero_grad()
-
+    print(data.shape)
+    print(target.shape)
     # Predict
     pred = model(data)
 
