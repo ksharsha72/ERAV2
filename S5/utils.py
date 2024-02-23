@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
-from model import Net
+
 
 
 def is_cuda_enabled():
@@ -50,7 +50,6 @@ test_incorrect_pred = {'images': [], 'ground_truths': [], 'predicted_vals': []}
 
 
 device = torch.device("cuda" if is_cuda_enabled() else "cpu")
-model = Net().to(device)
 
 
 
