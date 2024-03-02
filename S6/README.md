@@ -1,5 +1,15 @@
 # Part 1
-## Manual calculation of Backpropogation in a neural netowk of 1 hidden layers, 1 input layer and 1 output layer
+## Manual calculation of Backpropogation in a neural netowk of 1 hidden layers, 1 input layer and 1 output layer as shown in below image
+
+									
+									
+									
+										
+									
+									
+									
+![image](https://github.com/ksharsha72/ERAV2/assets/90446031/441f2ecf-1ed0-44dd-bb09-5c184bfd09d5)
+
 
 
 		∂E/∂W5 = (ao1-t1) * ao1*(1-ao1) * ah1		
