@@ -67,10 +67,10 @@ lr = 0.1
 ## The era-s6.ipynb notebook uses a small convolution neural network to classify the MNIST Dataset
 
 The neural network has a total parameters of 19822,
--with 2 layers in block1 with receptive field of 5 to extract edges and gradients, 
--then follwed by maxpool as a represntative of features
--with block 2 extrcat some what complex features and get a recetive field of 16 with max pooling
--in the final block we use 2 convolutions to increase the receptive field and fed outputs to fully connecetd layer for classification
+1) with 2 layers in block1 with receptive field of 6 to extract edges and gradients, 
+2) then follwed by maxpool as a represntative of features, which increases receptive field to 6
+3) with block 2 extrcat some what complex features and get a recetive field of 16 with max pooling
+4) in the final block we use 2 convolutions to increase the receptive field and fed outputs to fully connecetd layer for classification
 
 
 
