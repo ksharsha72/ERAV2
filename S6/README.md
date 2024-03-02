@@ -24,11 +24,7 @@
 ![image](https://github.com/ksharsha72/ERAV2/assets/90446031/c870e9fb-1560-407d-9a9a-c12f3e8ee8f3)
 
 6) later on we calculate the weight [W1, W2, W3, W4] w.r. to total loss E_TOTAL=E1+E2
-7) Now the network has multiple ways to back propogate we will divide it in to small steps for W1, so to explain formulas of individual derivatives will be given
-8) 
-9) 
-
-
+7) Now the network has multiple ways to back propogate we will divide it in to small steps for W1, so to explain formulas of individual derivatives will be given later
 
 
 
@@ -37,6 +33,36 @@
 		∂E/∂W3= ((ao1-t1) * ao1 * (1-ao1)*w6*ah2*(1-ah2)*i1) + ((ao2-t2) * ao2 * (1-ao2)*w8*ah2*(1-ah2)*i1) 					
 		∂E/∂W4= ((ao1-t1) * ao1 * (1-ao1)*w6*ah2*(1-ah2)*i2) + ((ao2-t2) * ao2 * (1-ao2)*w8*ah2*(1-ah2)*i2) 					
 ![image](https://github.com/ksharsha72/ERAV2/assets/90446031/193c30fe-f74e-4877-8358-275a6b66cdaf)
+
+
+
+
+## Here is the part of the entire calculation of the Back Bropogation
+![image](https://github.com/ksharsha72/ERAV2/assets/90446031/b26e05a7-b135-458c-99e1-803f27d1467a)
+
+## here are the loss function for different learning rates, which we use to update the weights
+
+lr = 1
+![image](https://github.com/ksharsha72/ERAV2/assets/90446031/ad4853ce-6440-4715-8cc9-53978095a440)
+
+lr = 2
+![image](https://github.com/ksharsha72/ERAV2/assets/90446031/b7cba204-7841-4f03-8fd4-f4bb535a27de)
+
+lr = 0.8
+![image](https://github.com/ksharsha72/ERAV2/assets/90446031/e61175c6-defc-4ebc-bead-0a1b69c382a6)
+
+lr = 0.5
+![image](https://github.com/ksharsha72/ERAV2/assets/90446031/adab8941-a93e-472b-b5ee-4219f5872be9)
+
+lr = 0.2
+![image](https://github.com/ksharsha72/ERAV2/assets/90446031/2ad282ae-c4fa-4567-83ee-be37c0522f02)
+
+lr = 0.1
+![image](https://github.com/ksharsha72/ERAV2/assets/90446031/dd2fa200-46d6-4fba-9798-71556fc4df2b)
+
+
+
+
 
 
 
