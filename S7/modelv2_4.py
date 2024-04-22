@@ -9,12 +9,12 @@ class ModelV2(nn.Module):
         super().__init__()
 
         self.conv1 = nn.Sequential(
-            nn.Conv2d(1, 8, 3), nn.BatchNorm2d(8), nn.ReLU(), nn.Dropout(0.05)
+            nn.Conv2d(1, 10, 3), nn.BatchNorm2d(10), nn.ReLU(), nn.Dropout(0.05)
         )
         # output: 26, RF: 3
 
         self.conv2 = nn.Sequential(
-            nn.Conv2d(8, 12, 3, padding=1),
+            nn.Conv2d(10, 12, 3, padding=1),
             nn.BatchNorm2d(12),
             nn.ReLU(),
             nn.Dropout(0.05),
