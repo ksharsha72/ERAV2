@@ -36,7 +36,7 @@ def train(model, device, train_loader, optim, epoch):
         )
 
     train_losses[epoch] = train_loss
-    train_acc[epoch] = epoch_acc
+    train_acc[epoch] = correct / processed * 100
 
 
 def test(model, device, test_loader, epoch):
@@ -53,16 +53,21 @@ def test(model, device, test_loader, epoch):
             loss = F.nll_loss(outputs, target, reduction="sum").item()
             test_loss += loss
             pred = torch.argmax(outputs, dim=1)
+
             # epoch_acc += (((pred == target).sum() / len(target)) * 100).item()
-            epoch_acc += (pred == target).sum().item() / len(target)
+            # epoch_acc += (pred == target).sum().item() / len(target)
             correct += (pred == target).sum().item()
             processed += len(target)
             # pbar.set_description(f"Test  batch for batch {batch}, loss =  {loss.item()},{correct}/{len(target)}, accuracy = {batch_acc}" )
     # test_loss /= len(test_loader.dataset)
+    # print("The epoch_acc is ", epoch_acc)
     test_losses[epoch] = test_loss / len(test_loader.dataset)
-    test_acc[epoch] = epoch_acc * 100
+    test_acc[epoch] = correct / processed * 100
     print(
         "\n Test set Avg Loss = {:.4f}, Accuracy {}/{},({:.2f}%)\n".format(
-            test_loss, correct, processed, 100 * (correct / processed)
+            test_loss / len(test_loader.dataset),
+            correct,
+            processed,
+            100 * (correct / processed),
         )
     )
