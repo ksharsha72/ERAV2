@@ -57,7 +57,7 @@ class ModelV2(nn.Module):
         # output: 7, RF: 18
 
         self.conv7 = nn.Sequential(
-            nn.Conv2d(16, 18, 3), nn.BatchNorm2d(18), nn.ReLU(), nn.Dropout(0.05)
+            nn.Conv2d(16, 16, 3), nn.BatchNorm2d(16), nn.ReLU(), nn.Dropout(0.05)
         )
 
         # output: 5, RF: 22
@@ -72,7 +72,7 @@ class ModelV2(nn.Module):
         # output: 1, RF: 28
 
         self.conv8 = nn.Sequential(
-            nn.Conv2d(18, 10, 1),
+            nn.Conv2d(16, 10, 1),
         )
         # output: 1, RF: 28
 
